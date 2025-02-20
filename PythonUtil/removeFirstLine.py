@@ -36,9 +36,9 @@ meta = open(r"/path/to/metadata.txt","r")
 rd = csv.DictReader(meta, delimiter="\t", quotechar='"')
 for row in rd:
 	#if "BMC" in row["Sample"] or "CHTN" in row["Sample"]:
-		#add_columns("/home/malachi/Desktop/TCR-old/"+row["Sample"]+".tsv","/home/malachi/Desktop/TCR/"+row["Sample"]+".tsv", ["hasCancer"],["False"])
+		#add_columns("/path/to/old-data-folder/"+row["Sample"]+".tsv","/path/to/new-data-folder/"+row["Sample"]+".tsv", ["hasCancer"],["False"])
 	#else:
-		#add_columns("/home/malachi/Desktop/TCR-old/"+row["Sample"]+".tsv","/home/malachi/Desktop/TCR/"+row["Sample"]+".tsv", ["hasCancer","Age (Range)","Gender","Diagnosis","Smoke Years","Tissue Source","Disease Stage"],["True",row["Age (Range)"],row["Gender"],row["Diagnosis"],row["Smoke Years"],row["Tissue Source"],row["Disease Stage"]])1
+		#add_columns("/path/to/old-data-folder/"+row["Sample"]+".tsv","/path/to/new-data-folder/"+row["Sample"]+".tsv", ["hasCancer","Age (Range)","Gender","Diagnosis","Smoke Years","Tissue Source","Disease Stage"],["True",row["Age (Range)"],row["Gender"],row["Diagnosis"],row["Smoke Years"],row["Tissue Source"],row["Disease Stage"]])1
 	delete_first_row("/path/to/old-data-folder/"+row["Sample"]+".tsv","/path/to/new-data-folder/"+row["Sample"]+".tsv")
 meta.close()
 print(lst)
