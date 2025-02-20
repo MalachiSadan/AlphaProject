@@ -3,6 +3,7 @@ import csv
 
 """
 I used this code for removing the first line in every file' sunce it was problematic
+This might be obsolete and shouldn't be included
 """
 
 def add_columns(input_file, output_file, column_names, values):
