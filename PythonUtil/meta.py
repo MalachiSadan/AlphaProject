@@ -1,7 +1,11 @@
 import csv
 import os
-dir = r"/home/malachi/Desktop/TCR"
-tsv = open(r"/home/malachi/Desktop/metadata.txt", "w")
+
+"""
+code used for creating the metadata file
+"""
+dir = r"/path/to/data"
+tsv = open(r"/path/to/data/metadata.txt", "w")
 wrt = csv.writer(tsv, delimiter="\t")
 def indexer(lst, param):
         for i in lst:
