@@ -1,0 +1,403 @@
+---
+title: "Feature filtering"
+output: html_notebook
+---
+```{r}
+library(readr)
+library(readxl)
+library(tidyr)
+library(dplyr)
+library(immunarch)
+library(data.table)
+library(caret)
+library(randomForest)
+library(pROC)
+library(xgboost)
+```
+
+Load subsampled data
+```{r}
+# this object was created in the immunarch_analysis script
+sub <- readRDS(file="sub-pbmc.Rdata")
+meta <- readRDS(file="meta.Rdata")
+```
+
+func used to remove problematic columns so the PCA will end successfully
+```{r}
+remove_prob_cols <- function(features, near_zero_threshold = 1e-7) {
+  constant_cols <- which(apply(features, 2, function(x) length(unique(x)) == 1))
+  zero_var_cols <- which(apply(features, 2, var) == 0)
+  near_zero_var_cols <- which(apply(features, 2, var) < near_zero_threshold)
+
+  problem_cols <- unique(c(constant_cols, zero_var_cols))
+
+
+  removed_cols_names <- character(0) # Initialize to empty character vector
+  near_zero_cols_names <- character(0)
+
+  if (length(problem_cols) > 0) {
+    removed_cols_names <- colnames(features)[problem_cols]
+    features_pca <- features[, -problem_cols, drop = FALSE] # drop=FALSE prevents converting to vector if only 1 column
+  } else {
+    features_pca <- features # Keep original if no constant/zero variance
+  }
+
+  if (length(near_zero_var_cols) > 0) {
+    near_zero_cols_names <- colnames(features)[near_zero_var_cols]
+    # Remove near-zero variance columns as well (optional, uncomment if needed)
+    # features_pca <- features_pca[, -near_zero_var_cols, drop = FALSE] #Remove from features_pca if needed
+  }
+  # Return result + removed column in a list. OBSOLETE--
+  # return(list(features_pca = features_pca, removed_cols = removed_cols_names, near_zero_cols = near_zero_cols_names))
+  return(features_pca)
+}
+```
+
+
+threshold filtering
+```{r}
+# Create the feature-samples matrix
+pub_lung_ds <- publicRepertoire(sub,'aa','prop')
+
+pub_lung_ds2 <- pub_lung_ds 
+pub_lung_ds2[is.na(pub_lung_ds2)] <- 0
+pub_lung_ds2 <- t(pub_lung_ds2)
+colnames(pub_lung_ds2) <- pub_lung_ds2[1,]
+pub_lung_ds2 <- pub_lung_ds2[2:nrow(pub_lung_ds2),]
+rnames <- rownames(pub_lung_ds2)
+pub_lung_ds2 <- apply(pub_lung_ds2,2,as.numeric)
+rownames(pub_lung_ds2) <- rnames
+
+pub_lung_ds2 <- as.data.frame(pub_lung_ds2)
+pub_lung_ds2$Disease_Stage <- (data.frame(Sample = rnames) %>% left_join(.,meta,by='Sample'))$`Disease Stage`
+pub_lung_ds2 <- pub_lung_ds2[,c(ncol(pub_lung_ds2),2:ncol(pub_lung_ds2)-1)]
+pub_lung_ds2 <- pub_lung_ds2[-1,]
+
+#feature based method:
+
+# Calculate the column sums (frequency of each CDR3 sequence)
+col_frequencies <- colSums(pub_lung_ds2[, -1])  # Assuming first column is the target variable
+# Retain only columns with a frequency above a threshold
+threshold <- 0.01  # Adjust this threshold as needed
+filtered_data <- pub_lung_ds2[, c(1, which(col_frequencies > threshold))]
+
+filtered_data <- filtered_data[,-2]
+```
+
+```{r}
+# Step 3: PCA for Dimensionality Reduction
+# Separate features and target variable
+features <- filtered_data[, -1]
+target <- filtered_data$Disease_Stage
+
+# Perform PCA on filtered features
+pca_result <- prcomp(features, center = TRUE, scale. = TRUE)
+
+# Determine the number of components explaining 95% of the variance
+explained_variance <- cumsum(pca_result$sdev^2) / sum(pca_result$sdev^2)
+num_components <- which(explained_variance >= 0.95)[1]
+
+# Reduce the data to the selected PCA components
+pca_data <- data.frame(Disease_Stage = target, pca_result$x[, 1:num_components])
+
+# Step 4: Split Data into Training and Testing Sets
+set.seed(123)  # For reproducibility
+pca_data <- pca_data[sample(1:nrow(pca_data)), ] 
+
+write.csv(pca_data,"./data_pca_thresh.csv", row.names = T)
+```
+
+```{r}
+ggplot(pca_data, aes(PC1,PC2,color=Disease_Stage)) + 
+  geom_point() + 
+  scale_color_discrete(name="Stage", labels=c("I","II","III","H"))
+```
+
+run ML in R - OBSOLETE
+```{r}
+trainIndex <- createDataPartition(pca_data$Disease_Stage, p = 0.8, list = FALSE)
+trainData <- pca_data[trainIndex, ]
+testData <- pca_data[-trainIndex, ]
+
+trainData$Disease_Stage <- as.factor(trainData$Disease_Stage)
+testData$Disease_Stage <- as.factor(testData$Disease_Stage)
+
+# Step 5: Train the Random Forest Model
+rf_model <- randomForest(Disease_Stage ~ ., data = trainData, ntree = 500, importance = TRUE)
+
+# Step 6: Evaluate the Model
+# Predict on the test data
+rf_predictions <- predict(rf_model, testData)
+
+# Confusion Matrix
+conf_matrix <- confusionMatrix(rf_predictions, testData$Disease_Stage)
+
+# Print evaluation results
+print(conf_matrix)
+
+# Step 7: Feature Importance Plot
+varImpPlot(rf_model)
+
+ggplot(as.data.frame(conf_matrix$table), aes(Reference,Prediction, fill=Freq)) + geom_tile() + geom_text(aes(label=Freq)) +
+    scale_fill_gradient(low="white", high="#009194") +
+    labs(x = "Reference",y = "Prediction") +
+    scale_x_discrete(labels=c("I","II","III")) +
+    scale_y_discrete(labels=c("I","II","III"))
+```
+
+prepare top 1000 abundant sequences feature select
+```{r}
+top_1000_pub <- pub_lung_ds[order(-pub_lung_ds$Samples),][1:1000,]
+top_1000_pub[is.na(top_1000_pub)] <- 0
+top_1000_pub <- t(top_1000_pub)
+colnames(top_1000_pub) <- top_1000_pub[1,]
+top_1000_pub <- top_1000_pub[2:nrow(top_1000_pub),]
+top_rnames <- rownames(top_1000_pub)
+top_1000_pub <- apply(top_1000_pub,2,as.numeric)
+rownames(top_1000_pub) <- top_rnames
+
+top_1000_pub <- as.data.frame(top_1000_pub)
+top_1000_pub$Disease_Stage <- (data.frame(Sample = top_rnames) %>% left_join(.,meta,by='Sample'))$`Disease Stage`
+top_1000_pub <- top_1000_pub[,c(ncol(top_1000_pub),2:ncol(top_1000_pub)-1)]
+top_1000_pub <- top_1000_pub[-1,]
+top_1000_pub <- top_1000_pub[sample(1:nrow(top_1000_pub)), ]
+
+# Separate features and target variable
+features <- top_1000_pub[, -1]
+target <- top_1000_pub$Disease_Stage
+
+features=remove_prob_cols(features)
+
+# Perform PCA on filtered features
+pca_result <- prcomp(features, center = TRUE, scale. = TRUE)
+
+# Determine the number of components explaining 95% of the variance
+explained_variance <- cumsum(pca_result$sdev^2) / sum(pca_result$sdev^2)
+num_components <- which(explained_variance >= 0.95)[1]
+
+# Reduce the data to the selected PCA components
+pca_data <- data.frame(Disease_Stage = target, pca_result$x[, 1:num_components])
+
+# Step 4: Split Data into Training and Testing Sets
+pca_data <- pca_data[sample(1:nrow(pca_data)), ] 
+
+write.csv(pca_data,"./data_top_1000.csv", row.names = T)
+```
+
+```{r}
+ggplot(pca_data, aes(PC1,PC2,color=Disease_Stage)) + 
+  geom_point() + 
+  scale_color_discrete(name="Stage", labels=c("I","II","III","H"))
+```
+
+run ML in R - OBSOLETE
+```{r}
+top_trainIndex <- createDataPartition(top_1000_pub$Disease_Stage, p = 0.8, list = FALSE)
+top_trainData <- top_1000_pub[top_trainIndex, ]
+top_testData <- top_1000_pub[-top_trainIndex, ]
+
+top_trainData$Disease_Stage <- as.factor(top_trainData$Disease_Stage)
+top_testData$Disease_Stage <- as.factor(top_testData$Disease_Stage)
+
+# Step 5: Train the Random Forest Model
+top_rf_model <- randomForest(Disease_Stage ~ ., data = top_trainData, ntree = 500, importance = TRUE)
+
+# Step 6: Evaluate the Model
+# Predict on the test data
+top_rf_predictions <- predict(top_rf_model, top_testData)
+
+# Confusion Matrix
+top_conf_matrix <- confusionMatrix(top_rf_predictions, top_testData$Disease_Stage)
+
+# Print evaluation results
+print(top_conf_matrix)
+
+# Step 7: Feature Importance Plot
+varImpPlot(top_rf_model)
+
+ggplot(as.data.frame(top_conf_matrix$table), aes(Reference,Prediction, fill=Freq)) + geom_tile() + geom_text(aes(label=Freq)) +
+    scale_fill_gradient(low="white", high="#009194") +
+    labs(x = "Reference",y = "Prediction") +
+    scale_x_discrete(labels=c("I","II","III")) +
+    scale_y_discrete(labels=c("I","II","III"))
+```
+
+
+prepare top 10 abundant sequences in every sample
+```{r}
+top10_pub <- pub_lung_ds
+top10_pub$Samples <- NULL
+top10_pub[is.na(top10_pub)] <- 0
+
+top10_indices <- lapply(top10_pub, function(x) { head(top10_pub$CDR3.aa[order(x, decreasing = TRUE)], 100) })
+top10_indices$CDR3.aa <- NULL
+top10_indices <- unlist(top10_indices) %>% unique()
+```
+
+
+```{r}
+top10_pub <- top10_pub[top10_pub$CDR3.aa %in% top10_indices]
+top10_pub <- t(top10_pub)
+colnames(top10_pub) <- top10_pub[1,]
+top10_pub <- top10_pub[2:nrow(top10_pub),]
+top10_rnames <- rownames(top10_pub)
+top10_pub <- apply(top10_pub,2,as.numeric)
+rownames(top10_pub) <- top10_rnames
+
+top10_pub <- as.data.frame(top10_pub)
+top10_pub$Disease_Stage <- (data.frame(Sample = top10_rnames) %>% left_join(.,meta,by='Sample'))$`Disease Stage`
+top10_pub <- top10_pub[,c(ncol(top10_pub),2:ncol(top10_pub)-1)]
+top10_pub <- top10_pub[-1,]
+top10_pub <- top10_pub[sample(1:nrow(top10_pub)), ]
+
+features <- top10_pub[, -1]
+target <- top10_pub$Disease_Stage
+
+features=remove_prob_cols(features)
+
+# Perform PCA on filtered features
+pca_result <- prcomp(features, center = TRUE, scale. = TRUE)
+
+# Determine the number of components explaining 95% of the variance
+explained_variance <- cumsum(pca_result$sdev^2) / sum(pca_result$sdev^2)
+num_components <- which(explained_variance >= 0.95)[1]
+
+# Reduce the data to the selected PCA components
+pca_data <- data.frame(Disease_Stage = target, pca_result$x[, 1:num_components])
+
+# Step 4: Split Data into Training and Testing Sets
+pca_data <- pca_data[sample(1:nrow(pca_data)), ] 
+
+write.csv(pca_data,"./data_top10.csv", row.names = T)
+```
+
+```{r}
+ggplot(pca_data, aes(PC1,PC2,color=Disease_Stage)) + 
+  geom_point() + 
+  scale_color_discrete(name="Stage", labels=c("I","II","III","H"))
+```
+
+run ML in R - OBSOLETE
+```{r}
+top10_trainIndex <- createDataPartition(top10_pub$Disease_Stage, p = 0.8, list = FALSE)
+top10_trainData <- top10_pub[top10_trainIndex, ]
+top10_testData <- top10_pub[-top10_trainIndex, ]
+
+top10_trainData$Disease_Stage <- as.factor(top10_trainData$Disease_Stage)
+top10_testData$Disease_Stage <- as.factor(top10_testData$Disease_Stage)
+
+# Step 5: Train the Random Forest Model
+top10_rf_model <- randomForest(Disease_Stage ~ ., data = top10_trainData, ntree = 500, importance = TRUE)
+
+# Step 6: Evaluate the Model
+# Predict on the test data
+top10_rf_predictions <- predict(top10_rf_model, top10_testData)
+
+# Confusion Matrix
+top10_conf_matrix <- confusionMatrix(top10_rf_predictions, top10_testData$Disease_Stage)
+
+# Print evaluation results
+print(top10_conf_matrix)
+
+# Step 7: Feature Importance Plot
+varImpPlot(top10_rf_model)
+```
+
+```{r}
+ggplot(as.data.frame(top10_conf_matrix$table), aes(Reference,Prediction, fill=Freq)) + geom_tile() + geom_text(aes(label=Freq)) +
+    scale_fill_gradient(low="white", high="#009194") +
+    labs(x = "Reference",y = "Prediction") +
+    scale_x_discrete(labels=c("I","II","III")) +
+    scale_y_discrete(labels=c("I","II","III"))
+```
+
+
+prepare top 1000 abundant sequences in tumor samples
+```{r}
+tumor <- repLoad("~/Desktop/TCR -tumor")
+pub_t <- pubRep(tumor$data, .col = "aa", "prop")
+```
+
+include only these sequences, and only if they appear in PBMC samples too
+```{r}
+topt_pub <- pub_lung_ds
+topt_indices <- head(pub_t$CDR3.aa[order(pub_t$Samples, decreasing = TRUE)],1000)
+topt_indices <- topt_indices[!topt_indices %in% setdiff(topt_indices, topt_pub$CDR3.aa)]
+
+topt_pub <- topt_pub[topt_pub$CDR3.aa %in% topt_indices,]
+topt_pub$Samples <- NULL
+topt_pub[is.na(topt_pub)] <- 0
+```
+
+```{r}
+topt_pub <- t(topt_pub)
+colnames(topt_pub) <- topt_pub[1,]
+topt_pub <- topt_pub[2:nrow(topt_pub),]
+topt_rnames <- rownames(topt_pub)
+topt_pub <- apply(topt_pub,2,as.numeric)
+rownames(topt_pub) <- topt_rnames
+
+topt_pub <- as.data.frame(topt_pub)
+topt_pub$Disease_Stage <- (data.frame(Sample = topt_rnames) %>% left_join(.,meta,by='Sample'))$`Disease Stage`
+topt_pub <- topt_pub[,c(ncol(topt_pub),2:ncol(topt_pub)-1)]
+topt_pub <- topt_pub[-1,]
+topt_pub <- topt_pub[sample(1:nrow(topt_pub)), ]
+
+features <- topt_pub[, -1]
+target <- topt_pub$Disease_Stage
+
+features=remove_prob_cols(features)
+
+# Perform PCA on filtered features
+pca_result <- prcomp(features, center = TRUE, scale. = TRUE)
+
+# Determine the number of components explaining 95% of the variance
+explained_variance <- cumsum(pca_result$sdev^2) / sum(pca_result$sdev^2)
+num_components <- which(explained_variance >= 0.95)[1]
+
+# Reduce the data to the selected PCA components
+pca_data <- data.frame(Disease_Stage = target, pca_result$x[, 1:num_components])
+
+# Step 4: Split Data into Training and Testing Sets
+pca_data <- pca_data[sample(1:nrow(pca_data)), ] 
+
+write.csv(pca_data,"./data_top_tumor.csv", row.names = T)
+```
+
+```{r}
+ggplot(pca_data, aes(PC1,PC2,color=Disease_Stage)) + 
+  geom_point() + 
+  scale_color_discrete(name="Stage", labels=c("I","II","III","H"))
+```
+
+run ML in R - OBSOLETE
+```{r}
+topt_trainIndex <- createDataPartition(topt_pub$Disease_Stage, p = 0.8, list = FALSE)
+topt_trainData <- topt_pub[topt_trainIndex, ]
+topt_testData <- topt_pub[-topt_trainIndex, ]
+
+topt_trainData$Disease_Stage <- as.factor(topt_trainData$Disease_Stage)
+topt_testData$Disease_Stage <- as.factor(topt_testData$Disease_Stage)
+
+# Step 5: Train the Random Forest Model
+topt_rf_model <- randomForest(Disease_Stage ~ ., data = topt_trainData, ntree = 500, importance = TRUE)
+
+# Step 6: Evaluate the Model
+# Predict on the test data
+topt_rf_predictions <- predict(topt_rf_model, topt_testData)
+
+# Confusion Matrix
+topt_conf_matrix <- confusionMatrix(topt_rf_predictions, topt_testData$Disease_Stage)
+
+# Print evaluation results
+print(topt_conf_matrix)
+
+# Step 7: Feature Importance Plot
+varImpPlot(topt_rf_model)
+
+ggplot(as.data.frame(topt_conf_matrix$table), aes(Reference,Prediction, fill=Freq)) + geom_tile() + geom_text(aes(label=Freq)) +
+    scale_fill_gradient(low="white", high="#009194") +
+    labs(x = "Reference",y = "Prediction") +
+    scale_x_discrete(labels=c("I","II","III")) +
+    scale_y_discrete(labels=c("I","II","III"))
+```
