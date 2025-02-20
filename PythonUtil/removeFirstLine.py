@@ -1,6 +1,10 @@
 import os
 import csv
 
+"""
+I used this code for removing the first line in every file' sunce it was problematic
+"""
+
 def add_columns(input_file, output_file, column_names, values):
 	with open(input_file, 'r') as infile, open(output_file, 'w', newline='') as outfile:
 		reader = csv.reader(infile, delimiter="\t")
