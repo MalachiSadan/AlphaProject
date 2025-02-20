@@ -1,0 +1,608 @@
+Sample	Age (Range)	Gender	Diagnosis	Smoke Years	Tissue Source	Disease Stage
+MDA-2345-T	24-45 Years (Middle Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-1570-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	06-10 Pack Years	Normal adjacent tissue	i
+CHTN-26-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2230-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	ii
+MDA-1908-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-1914-N	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-2090-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tumor	i
+MDA-2004-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	iii
+MDA-2083-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tumor	i
+MDA-2333-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-1872-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-3242-C	65+ Years (Old Age)	Male	Adenocarcinoma	11-15 Pack Years	PBMC	ii
+CHTN-12-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1389-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tumor	iii
+MDA-1420-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	76+ Pack Years	Tissue	i
+MDA-1356-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1837-T	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	iii
+MDA-2352-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	06-10 Pack Years	PBMC	i
+MDA-2150-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-2254-T	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Tissue	ii
+MDA-2318-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1399-N1	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+BMC-79-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2292-T	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	Tissue	ii
+MDA-1875-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-2205-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Never Smoked	Tissue	iii
+CHTN-20-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1834-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	i
+MDA-1906-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-4386-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1505-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tumor	iii
+CHTN-19-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1206-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	iii
+MDA-2077-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1772-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-4383-N	65+ Years (Old Age)	Male	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-2122-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-2046-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2254-N	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	ii
+MDA-2230-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-1853-N1	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	06-10 Pack Years	Normal adjacent tissue	i
+CHTN-11-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2070-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	76+ Pack Years	PBMC	ii
+MDA-2271-C	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	PBMC	ii
+MDA-1361-N2	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1766-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	i
+MDA-2037-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-5808-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-1995-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tumor	iii
+MDA-3234-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tumor	i
+MDA-2286-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1520-N1	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-2243-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2262-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	iii
+MDA-1905-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1872-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-3290-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Tumor	i
+MDA-2041-T	65+ Years (Old Age)	Male	Adenocarcinoma	Ex-smoker	Tissue	i
+MDA-2040-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	ii
+MDA-2333-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2307-N	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-2292-N	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1756-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	PBMC	iii
+MDA-2276-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1760-N	N\A	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-3259-C	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1283-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	00-05 Pack Years	Normal adjacent tissue	i
+MDA-1788-T	24-45 Years (Middle Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tumor	iii
+CHTN-14-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1429-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	ii
+MDA-2037-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	ii
+MDA-1264-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1737-C	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	PBMC	ii
+MDA-1834-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1313-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1937-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-2068-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	PBMC	ii
+MDA-1339-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1937-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-2264-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	PBMC	ii
+MDA-2150-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-1429-LN	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Lymph node tissue	ii
+MDA-3203-T	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Tumor	i
+MDA-1366-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	iii
+MDA-1505-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1928-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Tissue	ii
+MDA-1823-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-3242-T	65+ Years (Old Age)	Male	Adenocarcinoma	11-15 Pack Years	Tumor	ii
+MDA-2221-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-4385-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1560-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-2150-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	PBMC	i
+MDA-2087-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	11-15 Pack Years	Normal adjacent tissue	ii
+MDA-1248-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1283-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	00-05 Pack Years	PBMC	i
+MDA-2292-C	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	PBMC	ii
+MDA-2088-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tumor	i
+MDA-2315-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-2021-T	24-45 Years (Middle Adulthood)	Male	Adenocarcinoma	Never Smoked	Tissue	ii
+MDA-1991-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1517-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-2347-N	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-1806-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2294-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	PBMC	i
+MDA-2060-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1733-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	PBMC	ii
+MDA-2021-N	24-45 Years (Middle Adulthood)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	ii
+MDA-2101-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	PBMC	iii
+MDA-1743-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-2286-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-1505-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	iii
+MDA-1664-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Tumor	i
+MDA-1361-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-1736-N	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Normal adjacent tissue	ii
+MDA-1826-N	65+ Years (Old Age)	Male	Adenocarcinoma	00-05 Pack Years	Normal adjacent tissue	ii
+CHTN-5-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2214-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	11-15 Pack Years	PBMC	i
+MDA-2031-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Tumor	i
+BMC-103-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2082-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-2028-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-2335-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1765-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	PBMC	ii
+MDA-2276-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1736-T	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Tissue	ii
+MDA-1937-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1514-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2316-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1991-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tumor	ii
+BMC-63-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1774-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2335-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2300-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Tissue	ii
+MDA-2022-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-1800-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	PBMC	ii
+MDA-1737-N	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	ii
+MDA-1570-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	06-10 Pack Years	Tissue	i
+MDA-1788-N	24-45 Years (Middle Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2175-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	PBMC	iii
+MDA-2237-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	iii
+MDA-4309-N	65+ Years (Old Age)	Female	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-3242-N	65+ Years (Old Age)	Male	Adenocarcinoma	11-15 Pack Years	Normal adjacent tissue	ii
+MDA-2095-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-3273-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-1720-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	i
+MDA-2344-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	16-25 Pack Years	Tissue	ii
+MDA-1971-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Tissue	i
+MDA-4386-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tumor	i
+MDA-1591-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	iii
+MDA-1995-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-1660-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-2122-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Tumor	i
+MDA-2318-C	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1530-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	i
+MDA-3290-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+CHTN-2-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2322-T	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	ii
+MDA-2110-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Tumor	i
+MDA-1550-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-1489-T1	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-1893-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	ii
+MDA-1843-N	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	Normal adjacent tissue	i
+MDA-2025-T	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Tissue	iii
+MDA-2068-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Tissue	ii
+MDA-1587-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	i
+MDA-2352-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	06-10 Pack Years	Tissue	i
+MDA-2294-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-2070-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-1453-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	00-05 Pack Years	Tissue	iii
+MDA-3273-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Never Smoked	Tumor	i
+MDA-2017-C	65+ Years (Old Age)	Female	Adenocarcinoma	06-10 Pack Years	PBMC	i
+MDA-2337-N	65+ Years (Old Age)	Female	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-2083-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+CHTN-24-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1914-T	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Tissue	i
+MDA-2214-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	11-15 Pack Years	Tissue	i
+MDA-1818-C	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-1775-N	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-1874-C	24-45 Years (Middle Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1708-T	65+ Years (Old Age)	Male	Adenocarcinoma	11-15 Pack Years	Tissue	i
+MDA-1463-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	ii
+MDA-2152-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2264-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Tissue	ii
+MDA-1453-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	00-05 Pack Years	Normal adjacent tissue	iii
+MDA-2325-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	PBMC	i
+MDA-2121-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	iii
+MDA-2221-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2093-N	65+ Years (Old Age)	Male	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-1913-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1746-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Ex-smoker	PBMC	ii
+MDA-2115-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1853-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	06-10 Pack Years	Tissue	i
+CHTN-7-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2155-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-4361-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-2110-LN	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Lymph node tissue	i
+MDA-2118-T	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-2240-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-4347-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-3273-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-1793-N	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1818-T	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Tissue	i
+MDA-3238-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2175-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	iii
+MDA-1660-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-1193-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1800-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1649-T	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Tissue	i
+MDA-4383-T	65+ Years (Old Age)	Male	Adenocarcinoma	16-25 Pack Years	Tumor	i
+CHTN-23-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-3238-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	ii
+MDA-1724-N1	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2261-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-2176-N	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-4378-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Tumor	i
+MDA-2022-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-1587-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+CHTN-21-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-3214-C	65+ Years (Old Age)	Female	Adenocarcinoma	00-05 Pack Years	PBMC	i
+MDA-2175-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Tissue	iii
+MDA-2114-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-2095-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1760-C	N\A	Female	Adenocarcinoma	26-50 Pack Years	PBMC	ii
+MDA-1769-N	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1746-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Ex-smoker	Tissue	ii
+MDA-1615-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	06-10 Pack Years	Normal adjacent tissue	iii
+MDA-2315-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Tissue	i
+MDA-1720-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-1720-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	PBMC	i
+MDA-2161-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-2262-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	iii
+MDA-1874-T	24-45 Years (Middle Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tumor	i
+MDA-1833-N	65+ Years (Old Age)	Female	Adenocarcinoma	00-05 Pack Years	Normal adjacent tissue	i
+MDA-1600-N1	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+CHTN-1-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2121-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	iii
+MDA-1389-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2154-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	06-10 Pack Years	Normal adjacent tissue	ii
+MDA-1612-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	76+ Pack Years	Tissue	ii
+MDA-2060-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2240-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1875-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2264-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-2114-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Never Smoked	Tumor	i
+MDA-2061-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	i
+MDA-3212-C	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-2325-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-1366-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2333-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-1550-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1823-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	76+ Pack Years	Tissue	iii
+MDA-1756-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	iii
+MDA-2040-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	PBMC	ii
+MDA-1425-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1566-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Tissue	i
+CHTN-15-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1455-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1636-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1413-T	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Tissue	i
+CHTN-22-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2271-N	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	ii
+MDA-2300-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	PBMC	ii
+MDA-1963-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Tumor	i
+MDA-2226-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	iii
+MDA-1733-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Tissue	ii
+MDA-3237-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-2244-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-5808-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tumor	ii
+MDA-1769-T	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	Tumor	ii
+MDA-1762-T	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	Tumor	i
+MDA-2344-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	16-25 Pack Years	Normal adjacent tissue	ii
+CHTN-4-N	N\A	N\A	N\A	N\A	N\A	N\A
+CHTN-16-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1788-C	24-45 Years (Middle Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-2226-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-2154-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	06-10 Pack Years	PBMC	ii
+MDA-4347-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Tumor	i
+MDA-1660-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	i
+MDA-2254-C	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	PBMC	ii
+MDA-1386-N1	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-3290-C	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	i
+MDA-1264-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1170-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2017-N	65+ Years (Old Age)	Female	Adenocarcinoma	06-10 Pack Years	Normal adjacent tissue	i
+MDA-2221-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-2121-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1930-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	ii
+MDA-3237-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	Tumor	ii
+MDA-1848-T2	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Tissue	ii
+MDA-2155-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	i
+MDA-1913-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	PBMC	iii
+MDA-2028-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-2080-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	11-15 Pack Years	PBMC	ii
+MDA-2077-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+CHTN-13-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2226-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	PBMC	iii
+BMC-85-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1963-LN	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Lymph node tissue	i
+MDA-1766-N	N\A	N\A	Squamous cell carcinoma	Ex-smoker	Normal adjacent tissue	N\A
+MDA-2244-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-2140-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	16-25 Pack Years	Tissue	ii
+MDA-1278-T	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	ii
+MDA-1591-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	iii
+MDA-1822-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Tissue	ii
+MDA-1742-N	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	Normal adjacent tissue	i
+MDA-1800-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	ii
+MDA-2054-C	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-1455-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tumor	ii
+MDA-1904-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-2345-C	24-45 Years (Middle Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	PBMC	i
+MDA-2352-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	06-10 Pack Years	Normal adjacent tissue	i
+MDA-2237-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	iii
+MDA-3234-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	i
+MDA-2042-T	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Tissue	i
+MDA-2348-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1388-T1	65+ Years (Old Age)	Male	Squamous cell carcinoma	06-10 Pack Years	Tissue	iii
+MDA-3238-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tumor	ii
+CHTN-9-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2031-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	PBMC	i
+MDA-2082-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-2348-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2095-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-2320-T	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	i
+MDA-1950-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tumor	ii
+MDA-2090-LN	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Lymph node tissue	i
+MDA-1429-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tumor	ii
+MDA-1765-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-2345-N	24-45 Years (Middle Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-2074-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1409-T2	65+ Years (Old Age)	Male	Squamous cell carcinoma	Ex-smoker	Tissue	ii
+MDA-1636-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-1853-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	06-10 Pack Years	PBMC	i
+MDA-2276-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1762-C	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	PBMC	i
+MDA-1430-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-2176-T	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	Tissue	i
+MDA-3234-LN	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Lymph node tissue	i
+MDA-1483-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2195-C	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	i
+MDA-1450-N2	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1944-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1971-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-2294-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-2337-C	65+ Years (Old Age)	Female	Adenocarcinoma	76+ Pack Years	PBMC	i
+MDA-1409-N3	65+ Years (Old Age)	Male	Squamous cell carcinoma	Ex-smoker	Normal adjacent tissue	ii
+MDA-1908-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-2325-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-2139-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-1273-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	i
+MDA-2034-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	iii
+MDA-2265-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+CHTN-17-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1950-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1612-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-2077-C	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-1193-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1649-N	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-1930-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+BMC-67-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-4385-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tumor	i
+MDA-2097-C	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	PBMC	iii
+MDA-2243-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-1686-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2080-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	11-15 Pack Years	Normal adjacent tissue	ii
+MDA-1848-N	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-2152-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	PBMC	iii
+MDA-1746-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Ex-smoker	Normal adjacent tissue	ii
+MDA-2061-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2307-C	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	PBMC	i
+MDA-2022-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	PBMC	i
+MDA-2286-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	ii
+MDA-2004-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Tissue	iii
+BMC-82-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-3214-N	65+ Years (Old Age)	Female	Adenocarcinoma	00-05 Pack Years	Normal adjacent tissue	i
+MDA-2316-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-2205-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	iii
+MDA-1321-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	PBMC	iii
+MDA-1905-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	ii
+MDA-1193-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1756-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-2101-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	iii
+MDA-3253-C	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	ii
+MDA-1837-N	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	iii
+MDA-1686-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-1170-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-1388-N1	65+ Years (Old Age)	Male	Squamous cell carcinoma	06-10 Pack Years	Normal adjacent tissue	iii
+MDA-1874-LN	24-45 Years (Middle Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Lymph node tissue	i
+MDA-1893-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-1489-N2	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1826-T	65+ Years (Old Age)	Male	Adenocarcinoma	00-05 Pack Years	Tissue	ii
+MDA-2061-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	i
+MDA-1904-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2140-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	16-25 Pack Years	Normal adjacent tissue	ii
+MDA-1762-LN	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	Lymph node tissue	i
+MDA-2054-N	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-2348-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1392-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1206-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	iii
+MDA-1425-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	PBMC	i
+MDA-1517-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2057-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tumor	i
+MDA-2139-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tumor	ii
+MDA-1636-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-2237-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	51-75 Pack Years	PBMC	iii
+MDA-2046-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-2179-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-4309-T	65+ Years (Old Age)	Female	Adenocarcinoma	76+ Pack Years	Tumor	ii
+MDA-1822-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	PBMC	ii
+MDA-4363-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Tumor	ii
+MDA-1908-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	PBMC	i
+MDA-2041-N	65+ Years (Old Age)	Male	Adenocarcinoma	Ex-smoker	Normal adjacent tissue	i
+MDA-2343-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-1206-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	iii
+MDA-1845-T	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Tissue	i
+MDA-1742-C	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	PBMC	i
+MDA-2093-T	65+ Years (Old Age)	Male	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-2343-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Tissue	i
+MDA-1772-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	ii
+MDA-1356-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	76+ Pack Years	Tissue	i
+MDA-1214-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	ii
+MDA-3259-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2244-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1743-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1930-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	ii
+MDA-2108-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tumor	i
+MDA-1932-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-2068-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-1392-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	76+ Pack Years	Tissue	i
+MDA-1483-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tumor	i
+MDA-2271-T	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	ii
+MDA-1789-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-2337-T	65+ Years (Old Age)	Female	Adenocarcinoma	76+ Pack Years	Tissue	i
+MDA-2320-N	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-2087-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	11-15 Pack Years	Tumor	ii
+MDA-1420-N2	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1450-T1	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1570-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	06-10 Pack Years	PBMC	i
+MDA-2016-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1339-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	i
+MDA-3212-T	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Tumor	i
+MDA-2262-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tumor	iii
+MDA-2034-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-1430-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2265-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-2080-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	11-15 Pack Years	Tissue	ii
+MDA-1905-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-1150-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Tissue	ii
+MDA-2176-C	65+ Years (Old Age)	Male	Adenocarcinoma	51-75 Pack Years	PBMC	i
+MDA-2016-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	iii
+MDA-1774-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-1530-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2307-T	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Tissue	i
+MDA-1520-T1	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	ii
+MDA-1774-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	ii
+MDA-1742-T	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	Tissue	i
+CHTN-10-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2108-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-2004-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	PBMC	iii
+MDA-2155-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-1346-N	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-2074-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1785-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1591-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	iii
+MDA-1708-C	65+ Years (Old Age)	Male	Adenocarcinoma	11-15 Pack Years	PBMC	i
+MDA-1386-T1	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	iii
+MDA-1765-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	ii
+MDA-1399-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-1944-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	i
+MDA-2042-N	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1724-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-3260-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2318-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1425-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tumor	i
+MDA-2300-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Normal adjacent tissue	ii
+MDA-2052-N	65+ Years (Old Age)	Male	Adenocarcinoma	Ex-smoker	Normal adjacent tissue	iii
+MDA-1932-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1708-N	65+ Years (Old Age)	Male	Adenocarcinoma	11-15 Pack Years	Normal adjacent tissue	i
+MDA-1806-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	PBMC	ii
+MDA-1845-N	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-1600-T1	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-1362-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-2243-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-2347-T	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Tumor	i
+MDA-3259-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tumor	i
+MDA-1960-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-4363-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	PBMC	ii
+MDA-2261-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-1556-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1313-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Tumor	ii
+MDA-1150-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-1413-N	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1733-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-2031-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-1896-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-2097-T	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Tissue	iii
+MDA-4378-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-4361-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tumor	iii
+MDA-4382-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Tumor	iii
+MDA-1362-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	Tumor	ii
+MDA-4309-C	65+ Years (Old Age)	Female	Adenocarcinoma	76+ Pack Years	PBMC	ii
+MDA-1818-N	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-1273-N2	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-3253-LN	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Lymph node tissue	ii
+BMC-81-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1991-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	ii
+MDA-1950-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	PBMC	ii
+MDA-2025-N	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-1566-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-2052-T	65+ Years (Old Age)	Male	Adenocarcinoma	Ex-smoker	Tissue	iii
+CHTN-3-N	N\A	N\A	N\A	N\A	N\A	N\A
+CHTN-8-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2320-C	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	PBMC	i
+MDA-1843-T	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	Tumor	i
+MDA-1402-N3	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-2214-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	11-15 Pack Years	Normal adjacent tissue	i
+BMC-69-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1843-C	65+ Years (Old Age)	Female	Adenocarcinoma	11-15 Pack Years	PBMC	i
+MDA-4382-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1995-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-2335-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1532-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	i
+MDA-2054-T2	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Tissue	i
+MDA-1913-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	iii
+CHTN-25-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1928-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-2322-N	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-2060-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-2195-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Tumor	i
+MDA-1758-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1834-C	65+ Years (Old Age)	Female	Squamous cell carcinoma	26-50 Pack Years	PBMC	i
+MDA-1278-N	65+ Years (Old Age)	Female	Adenocarcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1248-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-1833-T	65+ Years (Old Age)	Female	Adenocarcinoma	00-05 Pack Years	Tissue	i
+MDA-2057-LN	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Lymph node tissue	i
+MDA-1463-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1758-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-3203-C	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-3212-N	65+ Years (Old Age)	Female	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-1737-T	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Tumor	ii
+MDA-3237-C	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	PBMC	ii
+MDA-1532-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-1914-C	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	PBMC	i
+MDA-1283-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	00-05 Pack Years	Tissue	i
+MDA-2315-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-2316-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1514-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-2017-T	65+ Years (Old Age)	Female	Adenocarcinoma	06-10 Pack Years	Tissue	i
+MDA-2195-N	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2179-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Tissue	iii
+MDA-2115-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-1971-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	51-75 Pack Years	PBMC	i
+MDA-2097-N	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	iii
+MDA-1822-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	16-25 Pack Years	Normal adjacent tissue	ii
+MDA-1556-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	Tissue	ii
+MDA-2101-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	iii
+MDA-2261-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Tissue	i
+MDA-1321-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	iii
+BMC-83-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1775-T	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Tissue	i
+MDA-1904-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1960-T	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-1785-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	76+ Pack Years	Tissue	i
+MDA-4363-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	ii
+MDA-2025-C	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	PBMC	iii
+MDA-1321-N1	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	iii
+MDA-2040-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	ii
+MDA-2154-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	06-10 Pack Years	Tumor	ii
+MDA-1963-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	16-25 Pack Years	PBMC	i
+MDA-2115-C	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-1664-N	65+ Years (Old Age)	Female	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-1273-C	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	PBMC	i
+MDA-3203-N	65+ Years (Old Age)	Male	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-2016-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	iii
+MDA-1560-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-1214-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	51-75 Pack Years	Normal adjacent tissue	ii
+MDA-1556-C	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	51-75 Pack Years	PBMC	ii
+MDA-1346-T	65+ Years (Old Age)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-2118-N	65+ Years (Old Age)	Female	Adenocarcinoma	16-25 Pack Years	Normal adjacent tissue	i
+MDA-1932-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-4347-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	Never Smoked	Normal adjacent tissue	i
+MDA-1615-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	06-10 Pack Years	Tissue	iii
+CHTN-6-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-1758-T	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Tissue	i
+MDA-1793-T	65+ Years (Old Age)	Male	Adenocarcinoma	76+ Pack Years	Tissue	i
+MDA-2152-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	iii
+MDA-3260-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tumor	i
+MDA-4378-C	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	16-25 Pack Years	PBMC	i
+MDA-1402-T3	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tissue	iii
+MDA-2057-C	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	PBMC	i
+MDA-1906-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Tissue	ii
+MDA-1806-T	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	ii
+MDA-2088-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Normal adjacent tissue	i
+MDA-2083-N	45-65 Years (Late Adulthood)	Female	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	i
+MDA-2070-T	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	76+ Pack Years	Tissue	ii
+BMC-75-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-3253-T	45-65 Years (Late Adulthood)	Female	Squamous cell carcinoma	26-50 Pack Years	Tumor	ii
+MDA-1549-N	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+MDA-1549-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	26-50 Pack Years	Tissue	iii
+MDA-2161-T	65+ Years (Old Age)	Male	Squamous cell carcinoma	76+ Pack Years	Tumor	i
+MDA-1896-N	45-65 Years (Late Adulthood)	Male	Squamous cell carcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-4361-N	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	iii
+BMC-68-N	N\A	N\A	N\A	N\A	N\A	N\A
+CHTN-18-N	N\A	N\A	N\A	N\A	N\A	N\A
+MDA-2230-N	65+ Years (Old Age)	Male	Adenocarcinoma	26-50 Pack Years	Normal adjacent tissue	ii
+MDA-1789-T	65+ Years (Old Age)	Female	Squamous cell carcinoma	51-75 Pack Years	Tissue	i
+MDA-3260-C	45-65 Years (Late Adulthood)	Male	Adenocarcinoma	26-50 Pack Years	PBMC	i
+MDA-3214-T	65+ Years (Old Age)	Female	Adenocarcinoma	00-05 Pack Years	Tumor	i
