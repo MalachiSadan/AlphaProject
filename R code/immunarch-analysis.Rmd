@@ -23,150 +23,159 @@ library(stats)
 
 load repertoires
 ```{r}
+# Load TCR repertoire data from PBMC samples in specified directory
 lung <- repLoad("~/Desktop/TCR-PBMC")
 ```
 
 
 low clones
 ```{r}
-clones<-repExplore(lung$data, .method = "clones")
+# Explore clone counts in the loaded data
+clones <- repExplore(lung$data, .method = "clones")
+# Arrange samples by clone count
 blood_order = arrange(clones, Clones)
+# Remove row names for cleaner output
 rownames(blood_order) = c()
+# Display top 8 entries
 head(blood_order, 8)
 ```
 
 omit small samples
 ```{r}
-lung$data[which(names(lung$data) %in% c("MDA-4378-C"))] <- NULL
+# Remove specific sample "MDA-4378-C" from the dataset
+lung$data[which(names(lung$meta) %in% c("MDA-4378-C"))] <- NULL
 ```
 
 barplot of sample frequency of each stage
 ```{r}
-# create dataframe of each disease stage frequency
-#stage_frequency <- data.frame(value = toupper(lung$meta[lung$meta$`Tissue Source`=="PBMC"|lung$meta$`Tissue Source`=="N\\A",]$`Disease Stage`)) %>%
-#  count(value)
-
+# Create dataframe counting frequency of disease stages for PBMC samples only
 stage_frequency <- data.frame(value = toupper(lung$meta[lung$meta$`Tissue Source`=="PBMC",]$`Disease Stage`)) %>%
   count(value)
+# Generate bar plot showing frequency by disease stage
 ggplot(stage_frequency, aes(x = value, y = n, fill = value)) +
-  geom_bar(stat = "identity") +
+  geom_bar(stat = "identity") +                    # Create bars with actual counts
   labs(title="Sample frequency by disease stage", x = "Disease stage", y = "Frequency") + 
-  scale_color_discrete(name="Stage", labels=c("I","II","III")) +
-  scale_fill_grey() 
+  scale_color_discrete(name="Stage", labels=c("I","II","III")) +  # Customize legend
+  scale_fill_grey()                                # Use grey color scale for fill
 ```
 
 
 subsampling for more accurate analysis
 ```{r}
+# Downsample the repertoire data to normalize sequencing depth
 sub <- repSample(.data = lung$data, .method = "downsample")
 ```
 
 ```{r}
-# this object will be used in the feature_filtering script as well.
-saveRDS(sub, "sub-pbmc.Rdata")
-saveRDS(lung$meta, "meta.Rdata")
+# Save subsampled data and metadata for use in other scripts
+saveRDS(sub, "sub-pbmc.Rdata")          # Save subsampled repertoire data
+saveRDS(lung$meta, "meta.Rdata")        # Save metadata
 ```
 
 ```{r}
+# Initialize empty lung object and reload saved data
 lung <- {}
-sub <- readRDS(file="sub-pbmc.Rdata")
-lung$meta <- readRDS(file="meta.Rdata")
+sub <- readRDS(file="sub-pbmc.Rdata")    # Load subsampled data
+lung$meta <- readRDS(file="meta.Rdata")  # Load metadata
 ```
 
 shannon diversity + richness index
 ```{r}
-# shannon index for subsampled samples
+# Calculate Shannon diversity index for each subsampled repertoire
 shannon_div <- lapply(sub, function(x) {diversity(x$Clones,index = "shannon")})
-# shannon index for pre-subsmpled samples
+# Combine diversity indices with disease stage information
 shannon_div <- as.matrix(shannon_div) %>% cbind(sapply(names(sub), function(x){lung$meta[lung$meta$Sample == x,]$`Disease Stage`}))
 
+# Create dataframe for diversity metrics
 df_div <- as.data.frame(shannon_div)
-colnames(df_div) <- c("shan","stage")
-# convert datatypes for plotting later on
-df_div$stage <- as.factor(as.numeric(factor(unlist(df_div$stage))))
-df_div$shan <- as.double(df_div$shan)
-# true false sickness measure for plot comparing
-#df_div$is.sick <- grepl("MDA",rownames(df_div))
-# richness measure for subsmapled and pre-subsmapled samples
+colnames(df_div) <- c("shan","stage")    # Rename columns
+# Convert data types for plotting
+df_div$stage <- as.factor(as.numeric(factor(unlist(df_div$stage))))  # Convert stage to factor
+df_div$shan <- as.double(df_div$shan)    # Convert Shannon index to double
+# Calculate richness (unique clonotypes) for subsampled and original data
 df_div$rich <- as.double(lapply(sub, function(x) {specnumber(x$Clones)}))
 df_div$presubrich <- as.double(lapply(lung$data, function(x) {specnumber(x$Clones)}))
 ```
 
 richness barplot pre subsample
 ```{r}
+# Plot richness index for original (pre-subsampled) data
 ggplot(df_div, aes(x = rownames(df_div), y = presubrich)) +
   geom_bar(stat='identity') + 
   labs(title = "Richness index", x="Samples", y="Richness level") +
-  theme_bw() + theme(axis.text.x=element_blank(),
+  theme_bw() + theme(axis.text.x=element_blank(),    # Remove x-axis labels for clarity
         axis.ticks.x=element_blank())
 ```
 
 richness barplot
 ```{r}
+# Plot richness index for subsampled data
 ggplot(df_div, aes(x = rownames(df_div), y = rich)) +
   geom_bar(stat='identity') + 
   labs(title = "Richness index", x="Samples", y="Richness level") +
-  theme_bw() + theme(axis.text.x=element_blank(),
+  theme_bw() + theme(axis.text.x=element_blank(),    # Remove x-axis labels for clarity
         axis.ticks.x=element_blank())
 ```
 
 
 richness index by disease stage
 ```{r}
+# Boxplot of richness by disease stage
 ggplot(df_div, aes(x = stage, y = rich, colour = stage)) +
   geom_boxplot() + 
-  scale_color_discrete(name="Stage", labels=c("I","II","III","H")) +
+  scale_color_discrete(name="Stage", labels=c("I","II","III","H")) +  # Color by stage
   labs(title = "Richness index by disease stage", x="Disease stage", y="Richness level") +
   theme_bw() +
-  stat_compare_means()
-# anova
+  stat_compare_means()    # Add statistical comparison (Kruskall-Wallis)
+# Perform ANOVA with Tukey's post-hoc test
 TukeyHSD(aov(rich~stage,data=df_div))
 ```
 
 shannon diversity by disease stage
 ```{r}
+# Boxplot of Shannon diversity by disease stage
 ggplot(df_div, aes(x = stage, y = shan, colour = stage)) +
   geom_boxplot() + 
-  scale_color_discrete(name="Stage", labels=c("I","II","III","H")) +
+  scale_color_discrete(name="Stage", labels=c("I","II","III","H")) +  # Color by stage
   labs(title = "Shannon diversity index by disease stage", x="Disease stage", y="Diversity level") +
   theme_bw() +
-  stat_compare_means() +
+  stat_compare_means() +  # Add statistical comparison (Kruskall-Wallis)
   stat_compare_means()
-# anova test
-TukeyHSD(aov(shan~stage,data=df_div)) 
+# Perform ANOVA with Tukey's post-hoc test
+TukeyHSD(aov(shan~stage,data=df_div))
 ```
 
 
 top clonal proportions by #health status# (obsolete) + disease stage, once with #healthy samples#, once without
 ```{r}
+# Calculate top clonal proportions
 clontop <- repClonality(sub, "top")
+# Visualize clonal proportions by disease stage
 vis(clontop, .by = "Disease Stage", .meta = lung$meta)
+# Add clonal proportion data to dataframe
 df_div$clonal10 <- clontop[,"10"]
 df_div$clonal3000 <- clontop[,"3000"]
-
-#vis(clontop, .by = "Tissue Source", .meta = lung$meta)
-#clontopstage <- repClonality(sub_lc, "top")
-#vis(clontopstage, .by = "Disease Stage", .meta = lung$meta)
+# Perform ANOVA tests for clonal proportions
 TukeyHSD(aov(clonal10~stage,data=df_div))
 TukeyHSD(aov(clonal3000~stage,data=df_div))
 ```
 
 repetoire overlap analysis
 ```{r}
-public <- repOverlap(sub, .method = "public", .verbose = F, .col = "aa")
-morisita <- repOverlap(sub, .method = "morisita", .verbose = F, .col = "aa")
-jaccard <- repOverlap(sub, .method = "jaccard", .verbose = F, .col = "aa")
+# Calculate repertoire overlap
+public <- repOverlap(sub, .method = "public", .verbose = F, .col = "aa")    # Public clonotypes
+morisita <- repOverlap(sub, .method = "morisita", .verbose = F, .col = "aa") # Morisita index
+jaccard <- repOverlap(sub, .method = "jaccard", .verbose = F, .col = "aa")   # Jaccard index
 ```
 
-save rds for later
 ```{r}
+# Save overlap analysis results for future use
 saveRDS(morisita, "morisita-pbmc.Rdata")
 saveRDS(public, "public-pbmc.Rdata")
 saveRDS(jaccard, "jaccard-pbmc.Rdata")
 ```
-
-load rds
 ```{r}
+# Load previously saved overlap analysis results
 morisita <- readRDS(file="morisita-pbmc.Rdata")
 public <- readRDS(file="public-pbmc.Rdata")
 jaccard <- readRDS(file="jaccard-pbmc.Rdata")
@@ -174,44 +183,36 @@ jaccard <- readRDS(file="jaccard-pbmc.Rdata")
 
 display overlap analysis ordered by disease stage
 ```{r}
-# Find the corresponding row indices in the repOverlap matrix for each sample in the metadata
+# Match sample indices between diversity dataframe and overlap matrices
 indices <- match(rownames(df_div), rownames(morisita))
-
-# Create a new metadata matrix with matching row indices
+# Create metadata matrix with matching indices
 metadata_matrix <- df_div[indices, ]
-
-# Order the metadata matrix based on disease stage
+# Order metadata by disease stage
 ordered_metadata <- metadata_matrix[order(metadata_matrix$stage), ]
-
-# Reorder the repOverlap matrix
+# Reorder overlap matrices by disease stage
 reordered_repOverlap_mor <- morisita[order(metadata_matrix$stage), order(metadata_matrix$stage)]
 reordered_repOverlap_jac <- jaccard[order(metadata_matrix$stage), order(metadata_matrix$stage)]
 reordered_repOverlap_pub <- public[order(metadata_matrix$stage), order(metadata_matrix$stage)]
-
+# Create annotation list for disease stages
 stage_anno_list <- setNames(as.character(ordered_metadata$stage), rownames(ordered_metadata))
 
-
+# Generate heatmaps for each overlap metric
 heat_mor <- Heatmap(reordered_repOverlap_mor, column_title = "Morisita overlap ordered by disease stage", cluster_rows = FALSE, cluster_columns = FALSE,
         top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "orange", "2" = "red", "3" = "brown")),
                                         annotation_legend_param = list(stage_top = list(labels = c("I", "II", "III")))),
         left_annotation = rowAnnotation(stage_left = stage_anno_list, col = list(stage_left = c("1" = "orange", "2" = "red", "3" = "brown")),
-                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III"))))
-        
-        )
+                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III")))))
 heat_jac <- Heatmap(reordered_repOverlap_jac, column_title = "Jaccard overlap ordered by disease stage", cluster_rows = FALSE, cluster_columns = FALSE,
         top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
                                         annotation_legend_param = list(stage_top = list(labels = c("I", "II", "III")))),
         left_annotation = rowAnnotation(stage_left = stage_anno_list, col = list(stage_left = c("1" = "pink", "2" = "orange", "3" = "brown")),
-                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III"))))
-        
-        )
+                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III")))))
 heat_pub <- Heatmap(reordered_repOverlap_pub, column_title = "Public overlap ordered by disease stage", cluster_rows = FALSE, cluster_columns = FALSE,
         top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
                                         annotation_legend_param = list(stage_top = list(labels = c("I", "II", "III")))),
         left_annotation = rowAnnotation(stage_left = stage_anno_list, col = list(stage_left = c("1" = "pink", "2" = "orange", "3" = "brown")),
-                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III"))))
-        
-        )
+                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III")))))
+# Draw the heatmaps
 draw(heat_mor)
 draw(heat_jac)
 draw(heat_pub)
@@ -219,24 +220,23 @@ draw(heat_pub)
 
 display overlap analysis by clustering
 ```{r}
-pub_clust <- Heatmap(public, column_title = "Public overlap ordered by clustering", top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
+# Generate clustered heatmaps for overlap metrics
+pub_clust <- Heatmap(public, column_title = "Public overlap ordered by clustering", 
+        top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
                                         annotation_legend_param = list(stage_top = list(labels = c("I", "II", "III")))),
         left_annotation = rowAnnotation(stage_left = stage_anno_list, col = list(stage_left = c("1" = "pink", "2" = "orange", "3" = "brown")),
-                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III"))))
-        
-        )
-mor_clust <- Heatmap(morisita, column_title = "Morisita overlap ordered by clustering", top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
+                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III")))))
+mor_clust <- Heatmap(morisita, column_title = "Morisita overlap ordered by clustering", 
+        top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
                                         annotation_legend_param = list(stage_top = list(labels = c("I", "II", "III")))),
         left_annotation = rowAnnotation(stage_left = stage_anno_list, col = list(stage_left = c("1" = "pink", "2" = "orange", "3" = "brown")),
-                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III"))))
-        
-        )
-jac_clust <- Heatmap(jaccard, column_title = "Jaccard overlap ordered by clustering", top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
+                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III")))))
+jac_clust <- Heatmap(jaccard, column_title = "Jaccard overlap ordered by clustering", 
+        top_annotation = HeatmapAnnotation(stage_top = stage_anno_list, col = list(stage_top = c("1" = "pink", "2" = "orange", "3" = "brown")),
                                         annotation_legend_param = list(stage_top = list(labels = c("I", "II", "III")))),
         left_annotation = rowAnnotation(stage_left = stage_anno_list, col = list(stage_left = c("1" = "pink", "2" = "orange", "3" = "brown")),
-                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III"))))
-        
-        )
+                                        annotation_legend_param = list(stage_left = list(labels = c("I", "II", "III")))))
+# Draw the clustered heatmaps
 draw(pub_clust)
 draw(mor_clust)
 draw(jac_clust)
@@ -280,29 +280,39 @@ ncol(tr_lc)
 
 perform pca on #healthy# (obsolete) + sick
 ```{r}
+# Perform principal component analysis (PCA) on transposed data
 pca_all_result <- prcomp(tr_lc, center = T)
 ```
 
 plot pca
 ```{r}
+# Plot PCA results colored by disease stage
 ggplot(pca_all_result$x, aes(PC1,PC2,color=df_div$stage)) + 
   geom_point() + 
   scale_color_discrete(name="Stage", labels=c("I","II","III","H"))
 ```
 
 ```{r}
+# Load F1 score results from CSV file
 f1_res = read.csv("./f1_results.csv")
 ```
 
 ```{r}
-ggplot(f1_res, aes(x=Model,y=f1.score,fill=Matrix)) + geom_bar(stat = "identity", position = "dodge") + ggtitle("ML Classification algorithms evaluation with F1 score") + labs(x= "ML model", y= "F1 Score") + theme_bw()
+# Bar plot comparing F1 scores across different ML models and matrices
+ggplot(f1_res, aes(x=Model,y=f1.score,fill=Matrix)) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  ggtitle("ML Classification algorithms evaluation with F1 score") + 
+  labs(x= "ML model", y= "F1 Score") + 
+  theme_bw()
 ```
 
 ```{r}
+# Bar plot of F1 scores for threshold matrix, colored by model
 ggplot(f1_res[f1_res$Matrix == "Threshold",], aes(x=Matrix,y=f1.score, fill=Model)) + 
-  geom_bar(stat = "identity", position = "dodge") + scale_fill_brewer(palette = "YlGn") + theme_bw() + labs(y="F1 score", x="Threshold matrix") + theme(axis.text.x=element_blank(),
+  geom_bar(stat = "identity", position = "dodge") + 
+  scale_fill_brewer(palette = "YlGn") +    # Use yellow-green color palette
+  theme_bw() + 
+  labs(y="F1 score", x="Threshold matrix") + 
+  theme(axis.text.x=element_blank(),       # Remove x-axis labels
         axis.ticks.x=element_blank())
 ```
-
-
-
