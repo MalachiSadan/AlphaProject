@@ -22,7 +22,6 @@ sub <- readRDS(file="sub-pbmc.Rdata")
 meta <- readRDS(file="meta.Rdata")
 ```
 
-func used to remove problematic columns so the PCA will end successfully
 ```{r}
 remove_prob_cols <- function(features, near_zero_threshold = 1e-7) {
   constant_cols <- which(apply(features, 2, function(x) length(unique(x)) == 1))
@@ -54,7 +53,7 @@ remove_prob_cols <- function(features, near_zero_threshold = 1e-7) {
 ```
 
 
-threshold filtering
+or's analysis
 ```{r}
 # Create the feature-samples matrix
 pub_lung_ds <- publicRepertoire(sub,'aa','prop')
@@ -82,6 +81,7 @@ threshold <- 0.01  # Adjust this threshold as needed
 filtered_data <- pub_lung_ds2[, c(1, which(col_frequencies > threshold))]
 
 filtered_data <- filtered_data[,-2]
+write.csv(filtered_data,"./data_thresh_clean.csv", row.names = T)
 ```
 
 ```{r}
@@ -102,7 +102,7 @@ pca_data <- data.frame(Disease_Stage = target, pca_result$x[, 1:num_components])
 
 # Step 4: Split Data into Training and Testing Sets
 set.seed(123)  # For reproducibility
-pca_data <- pca_data[sample(1:nrow(pca_data)), ] 
+pca_data <- pca_data[sample(1:nrow(pca_data)), ]
 
 write.csv(pca_data,"./data_pca_thresh.csv", row.names = T)
 ```
@@ -223,12 +223,13 @@ ggplot(as.data.frame(top_conf_matrix$table), aes(Reference,Prediction, fill=Freq
 ```
 
 
-prepare top 10 abundant sequences in every sample
 ```{r}
 top10_pub <- pub_lung_ds
 top10_pub$Samples <- NULL
 top10_pub[is.na(top10_pub)] <- 0
+```
 
+```{r}
 top10_indices <- lapply(top10_pub, function(x) { head(top10_pub$CDR3.aa[order(x, decreasing = TRUE)], 100) })
 top10_indices$CDR3.aa <- NULL
 top10_indices <- unlist(top10_indices) %>% unique()
@@ -312,13 +313,11 @@ ggplot(as.data.frame(top10_conf_matrix$table), aes(Reference,Prediction, fill=Fr
 ```
 
 
-prepare top 1000 abundant sequences in tumor samples
 ```{r}
 tumor <- repLoad("~/Desktop/TCR -tumor")
 pub_t <- pubRep(tumor$data, .col = "aa", "prop")
 ```
 
-include only these sequences, and only if they appear in PBMC samples too
 ```{r}
 topt_pub <- pub_lung_ds
 topt_indices <- head(pub_t$CDR3.aa[order(pub_t$Samples, decreasing = TRUE)],1000)
